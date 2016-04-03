@@ -34,10 +34,10 @@
     # Add all changes
     aa = add -A
 
-    # Commit
-    c = "!f() {\nif [ \"$1\" ]; then\ngit commit -m \"$1\"\nelse\n echo 'missing comment, commit failed'\n fi }; f"
-	# Commit all changes
-    ca = "!f() {\nif [ \"$1\" ]; then\ngit aa && git c \"$1\"\nelse\n echo 'missing comment, commit failed'\n fi }; f"
+    # Commit, must append a message, quoted in double quotes
+    c = "!f() {\nif [ $# -eq 1 ]; then\ngit commit -m \"$1\"\nelse\n echo 'missing comment, or comment without quotes, commit failed'\n fi }; f"
+    # Add all changes and then commit, must append a message, quoted in double quotes
+    ca = "!f() {\nif [ $# -eq 1 ]; then\ngit aa && git c \"$1\"\nelse\n echo 'missing comment, commit failed'\n fi }; f"
 
 	# Switch to a branch, creating it if necessary
 	co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -159,5 +159,5 @@
 	helper = cache --timeout=360000
 
 [user]
-    name = "Pufan Jiang"
+    name = "OTNT"
     email = "jiangpufan@gmail.com"
