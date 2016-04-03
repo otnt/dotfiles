@@ -35,10 +35,9 @@
     aa = add -A
 
     # Commit
-    c = "!f() { if [ $1 ]; then git commit -m \"$1\"\nelse echo 'missing comment, commit failed'\n fi }; f"
-    
+    c = "!f() {\nif [ $1 ]; then\ngit commit -m \"$1\"\nelse\n echo 'missing comment, commit failed'\n fi }; f"
 	# Commit all changes
-    ca = "!f() { if [ $1 ]; then git aa && git c \"$1\"\nelse echo 'missing comment, commit failed'\n fi }; f"
+    ca = "!f() {\nif [ $1 ]; then\ngit aa && git c \"$1\"\nelse\n echo 'missing comment, commit failed'\n fi }; f"
 
 	# Switch to a branch, creating it if necessary
 	co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
