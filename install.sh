@@ -30,3 +30,8 @@ source vim.sh
 # tmux configuration
 source tmux.sh
 
+# git configuration
+source git.sh
+
+# mongodb
+source mongodb.sh
