@@ -1,0 +1,19 @@
+FROM otnt/ubuntu
+
+WORKDIR /home/ubuntu
+
+# install tools
+RUN apt-get update &&\
+    apt-get install git curl wget &&\
+    apt-get install build-essential cmake python-dev python3-dev # this is for youcompleteme
+
+# install vundle
+RUN git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+RUN wget https://raw.githubusercontent.com/otnt/dotfiles/master/vimrc_vundle.conf -O .vimrc
+
+# install youcompleteme
+RUN cd .vim/bundle/YouCompleteMe &&\
+    ./install.py --clang-completer --gocode-completer --tern-completer
+
+# install all
+RUN vim +PluginInstall +qall
