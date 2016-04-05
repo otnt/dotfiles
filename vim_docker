@@ -3,9 +3,9 @@ FROM otnt/ubuntu
 WORKDIR /home/ubuntu
 
 # install tools
-RUN apt-get update &&\
-    apt-get install git curl wget &&\
-    apt-get install build-essential cmake python-dev python3-dev # this is for youcompleteme
+RUN apt-get update -y &&\
+    apt-get install -y git curl wget &&\
+    apt-get install -y build-essential cmake python-dev python3-dev # this is for youcompleteme
 
 # install vundle
 RUN git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
