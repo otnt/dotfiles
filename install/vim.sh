@@ -2,6 +2,7 @@
 # This script is used to install vim with AWESOME support
 # [Warning]: If you already have .vimrc in you home folder, please have a backup before running this script.
 #            Although this script will auto backup .vimrc (if exists) to .vimrc_backup in home folder.
+# [Usage]: Fork this script, modify USERHOME and USERNAME to your need, then `/bin/bash vim.sh`. Enjoy!
 
 #################### Modify below please #######################
 USERHOME=/home/vagrant
