@@ -9,7 +9,8 @@ USERNAME=`whoami`
 VIMDIR=$USERHOME/.vim_runtime
 
 # backup .vimrc
-if [ -f $HOME/.vimrc ] then 
+if [ -f $HOME/.vimrc ];
+then 
   cp $HOME/.vimrc $HOME/.vimrc_backup
 fi
 
