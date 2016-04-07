@@ -8,16 +8,16 @@ Purple='\033[0;35m'
 NC='\033[0m' # No Color
 
 # Update to Tmux 2.0
-apt-get update -y && \
-apt-get install -y python-software-properties software-properties-common && \
+apt-get update -y -qq && \
+apt-get install -y -qq python-software-properties software-properties-common && \
 add-apt-repository -y ppa:pi-rho/dev && \
-apt-get update -y && \
-apt-get install -y tmux=2.0-1~ppa1~t && \
+apt-get update -y -qq && \
+apt-get install -y -qq tmux=2.0-1~ppa1~t && \
 echo -e "${Green}Tmux 2.0 installed successfully${NC}"
 
 # Tmux plugins manager
 git clone https://github.com/tmux-plugins/tpm $TMUX_DIR/plugins/tpm -q && \
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/confige/.tmux.conf -O $USER_HOME/.tmux.conf && \
+wget -q https://raw.githubusercontent.com/otnt/dotfiles/master/confige/.tmux.conf -O $USER_HOME/.tmux.conf && \
 echo -e "${Green}Tmux configured successfully${NC}"
 echo -e "${Purple}Go into Tmux, and run 'Prefix + I' to install all plugins${NC}"
 
