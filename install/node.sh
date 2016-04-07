@@ -9,9 +9,9 @@ curl -sL https://deb.nodesource.com/setup_5.x | /bin/bash && \
 apt-get install -y -qq nodejs build-essential &&\
 echo -e "${Green}npm installed successfully${NC}" && \
 # Update npm
-npm install npm -g && \
+npm install npm -g -s && \
 # Update nodejs
-npm cache clean -f && \
-npm install -g n && \
+npm cache clean -f -s && \
+npm install -g n -s && \
 n stable && \
 echo -e "${Green}npm, node, js updated successfully${NC}"
