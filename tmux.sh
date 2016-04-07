@@ -1,16 +1,24 @@
+#!/bin/bash
+
+USER_HOME=$HOME
 TMUX_DIR="$USER_HOME/.tmux"
-POWERLINE_DIR="$TMUX_DIR/powerline"
+
+Green='\033[0;32m'
+Purple='\033[0;35m'
+NC='\033[0m' # No Color
 
 # Update to Tmux 2.0
-sudo apt-get update -y
-sudo apt-get install -y python-software-properties software-properties-common
-sudo add-apt-repository -y ppa:pi-rho/dev
-sudo apt-get update -y
-sudo apt-get install -y tmux=2.0-1~ppa1~t
+apt-get update -y && \
+apt-get install -y python-software-properties software-properties-common && \
+add-apt-repository -y ppa:pi-rho/dev && \
+apt-get update -y && \
+apt-get install -y tmux=2.0-1~ppa1~t && \
+echo -e "${Green}Tmux 2.0 installed successfully${NC}"
 
 # Tmux plugins manager
-git clone https://github.com/tmux-plugins/tpm $TMUX_DIR/plugins/tpm
-cat "./tmux_plugin.conf" >> $USER_HOME/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm $TMUX_DIR/plugins/tpm -q && \
+wget https://raw.githubusercontent.com/otnt/dotfiles/master/confige/.tmux.conf -O $USER_HOME/.tmux.conf && \
+echo -e "${Green}Tmux configured successfully${NC}"
+echo -e "${Purple}Go into Tmux, and run 'Prefix + I' to install all plugins${NC}"
 
-tmux source ~/.tmux.conf
 
