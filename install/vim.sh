@@ -14,7 +14,9 @@ then
 fi
 
 # install basic tools
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/install/basic.sh -O $USERHOME/.vim_runtime/my_configs.vim
+apt-get update && \
+apt-get install -y curl && \
+curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/basic_tools.sh | /bin/bash
 
 # install vim
 add-apt-repository ppa:fcwu-tw/ppa -y && \
@@ -27,7 +29,7 @@ git clone https://github.com/amix/vimrc.git $USERHOME/.vim_runtime && \
 sh $USERHOME/.vim_runtime/install_awesome_vimrc.sh
 
 # my vim config file, supplementary to ultimate vim
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/my_configs.vim  -O $USERHOME/.vim_runtime/my_configs.vim
+wget https://raw.githubusercontent.com/otnt/dotfiles/master/confige/.vimrc -O $USERHOME/.vim_runtime/my_configs.vim
 chown -R $USERNAME $USERHOME/.vim_runtime
 
 # install vundle
@@ -63,12 +65,12 @@ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=$USERHOME/ycm_build/clang++ . $USE
 cmake --build . --target ycm_core
 
 # Golang support
-curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/golang.sh | /bin/bash && \
+curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/golang.sh | /bin/bash && \
 cd $USERHOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/gocode && \
 go build
 
 # JS support
-curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/node.sh | /bin/bash && \
+curl -sL https://github.com/otnt/dotfiles/blob/master/install/node.sh | /bin/bash && \
 cd $USERHOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && \
 npm install --production
 
