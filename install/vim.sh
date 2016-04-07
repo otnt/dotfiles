@@ -93,3 +93,6 @@ vim +PluginInstall +qall
 echo -e "${Green}YouCompleteMe plugin installed successfully${NC}"
 
 cd $USERHOME
+rm -rf $USERHOME/ycm_build
+echo -e "${Green}Clean up successfully${NC}"
+
