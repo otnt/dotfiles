@@ -11,7 +11,7 @@ VIMDIR=$USERHOME/.vim_runtime
 # backup .vimrc
 if [ -f $HOME/.vimrc ] then 
   cp $HOME/.vimrc $HOME/.vimrc_backup
-fi;
+fi
 
 # install basic tools
 apt-get update -y &&\
