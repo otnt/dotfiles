@@ -7,8 +7,12 @@ call vundle#begin()
 "
 " let Vundle manage Vundle, required'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe' # best autocomplete plugin
-Plugin 'mbbill/undotree' # nice redo-unredo tool
+
+" best autocomplete plugin
+Plugin 'Valloric/YouCompleteMe'
+
+" nice redo-unredo tool
+Plugin 'mbbill/undotree'
 "
 " Keep Plugin commands between vundle#begin/end.
 " All of your Plugins must be added before the following line
