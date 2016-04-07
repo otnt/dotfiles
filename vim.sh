@@ -6,7 +6,6 @@
 
 USERHOME=$HOME
 USERNAME=`whoami`
-VIMDIR=$USERHOME/.vim_runtime
 
 # backup .vimrc
 if [ -f $HOME/.vimrc ];
@@ -17,6 +16,10 @@ fi
 # install basic tools
 apt-get update -y &&\
 apt-get install -y build-essential cmake git python-dev python3-dev wget
+
+# install vim
+add-apt-repository ppa:pkg-vim/vim-daily -y
+apt-get update -y && apt-get install -y vim
 
 # We're using the ultimate vim configuration as our base configuration
 # https://github.com/amix/vimrc
@@ -30,7 +33,7 @@ chown -R $USERNAME $USERHOME/.vim_runtime
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # my vim config file, supplementary to ultimate vim
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/vimrc_vundle.conf  -O $USERHOME/.vim_runtime/my_configs.vim
+wget https://raw.githubusercontent.com/otnt/dotfiles/master/my_configs.vim  -O $USERHOME/.vim_runtime/my_configs.vim
 
 # We are going to configure YouCompleteMe, which is missing in ultimate vim
 # configuration. Note YouCompleteMe is a little bit tricky, it needs some
@@ -39,7 +42,7 @@ git clone https://github.com/Valloric/YouCompleteMe.git $USERHOME/.vim/bundle/Yo
 cd $USERHOME/.vim/bundle/YouCompleteMe &&\
 git submodule update --init --recursive &&\
 cd $USERHOME &&\
-mkdir ycm_build &&\
+mkdir ycm_build
 
 # skip this step if you don't need c-family language support
 cd $USERHOME/ycm_build &&\
