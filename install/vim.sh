@@ -91,3 +91,5 @@ echo -e "${Green}YouCompleteMe JS supported successfully${NC}"
 # update plugins
 vim +PluginInstall +qall
 echo -e "${Green}YouCompleteMe plugin installed successfully${NC}"
+
+cd $USERHOME
