@@ -83,7 +83,7 @@ echo -e "${Green}YouCompleteMe go supported successfully${NC}"
 
 
 # JS support
-curl -sL https://github.com/otnt/dotfiles/blob/master/install/node.sh | /bin/bash && \
+curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/node.sh | /bin/bash && \
 cd $USERHOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && \
 npm install --production -s && \
 echo -e "${Green}YouCompleteMe JS supported successfully${NC}"
