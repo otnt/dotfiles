@@ -15,25 +15,24 @@ fi
 
 # install basic tools
 apt-get update -y &&\
-apt-get install -y build-essential cmake git python-dev python3-dev wget
+apt-get install -y build-essential cmake git python-dev python3-dev wget software-properties-common
 
 # install vim
-add-apt-repository ppa:pkg-vim/vim-daily -y
-apt-get update -y && apt-get install -y vim
+add-apt-repository ppa:fcwu-tw/ppa -y &&\
+apt-get update -y &&\
+apt-get install vim -y
 
 # We're using the ultimate vim configuration as our base configuration
 # https://github.com/amix/vimrc
 git clone https://github.com/amix/vimrc.git $USERHOME/.vim_runtime &&\
-sh $USERHOME/.vim_runtime/install_awesome_vimrc.sh &&\
-cd $USERHOME/.vim_runtime &&\
-cd $USERHOME &&\
+sh $USERHOME/.vim_runtime/install_awesome_vimrc.sh
+
+# my vim config file, supplementary to ultimate vim
+wget https://raw.githubusercontent.com/otnt/dotfiles/master/my_configs.vim  -O $USERHOME/.vim_runtime/my_configs.vim
 chown -R $USERNAME $USERHOME/.vim_runtime
 
 # install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# my vim config file, supplementary to ultimate vim
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/my_configs.vim  -O $USERHOME/.vim_runtime/my_configs.vim
 
 # We are going to configure YouCompleteMe, which is missing in ultimate vim
 # configuration. Note YouCompleteMe is a little bit tricky, it needs some
@@ -44,12 +43,17 @@ git submodule update --init --recursive &&\
 cd $USERHOME &&\
 mkdir ycm_build
 
+# change mode
+chown -R $USERNAME $USERHOME/.vim_runtime
+chown -R $USERNAME $USERHOME/.vim
+
 # skip this step if you don't need c-family language support
 cd $USERHOME/ycm_build &&\
 mkdir clang++ &&\
 wget http://llvm.org/releases/3.8.0/clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz &&\
 tar -xf clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz -C clang++ --strip-components=1 &&\
 rm clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz
+chown -R $USERNAME $USERHOME/ycm_build
 
 cd $USERHOME/ycm_build &&\
 # if don't need c-family language support
