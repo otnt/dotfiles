@@ -6,7 +6,7 @@ Also have install script for programming language (python, node, js, java etc), 
 
 # Install
 
-### **Recommended:**
+### **Recommended way:**
 
 The recommended way is using docker.
 
@@ -14,7 +14,7 @@ First install docker using [this script](https://github.com/otnt/dotfiles/blob/m
 
 Then install any tool you want. See usage helper under different [docker folder](https://github.com/otnt/dotfiles/tree/master/docker).
 
-### **Instal directly**
+### **Install directly:**
 
 Alteratively, you could install the tools directly using bash script.
 
