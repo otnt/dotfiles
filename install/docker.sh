@@ -1,3 +1,5 @@
+#!/bin/bash
+
 Green='\033[0;32m'
 Purple='\033[0;35m'
 NC='\033[0m' # No Color
