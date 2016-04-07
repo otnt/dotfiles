@@ -24,7 +24,7 @@ apt-get install -y -qq curl && \
 curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/basic_tools.sh | /bin/bash
 
 # install vim
-add-apt-repository ppa:fcwu-tw/ppa -y -qq && \
+add-apt-repository ppa:fcwu-tw/ppa -y && \
 apt-get update -y -qq && \
 apt-get install -y -qq vim && \
 echo -e "${Green}Vim installed successfully${NC}"
