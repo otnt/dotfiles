@@ -37,7 +37,6 @@ echo -e "${Green}Ultimate Vim installed successfully${NC}"
 
 # my vim config file, supplementary to ultimate vim
 wget https://raw.githubusercontent.com/otnt/dotfiles/master/confige/.vimrc -O $USERHOME/.vim_runtime/my_configs.vim -q
-chown -R $USERNAME $USERHOME/.vim_runtime
 
 # install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git $USERHOME/.vim/bundle/Vundle.vim -q && \
@@ -53,17 +52,12 @@ cd $USERHOME && \
 mkdir ycm_build && \
 echo -e "${Green}YouCompleteMe downloaded successfully${NC}"
 
-# change mode
-chown -R $USERNAME $USERHOME/.vim_runtime
-chown -R $USERNAME $USERHOME/.vim
-
 # skip this step if you don't need c-family language support
 cd $USERHOME/ycm_build && \
 mkdir clang++ && \
 wget http://llvm.org/releases/3.8.0/clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz -q && \
 tar -xf clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz -C clang++ --strip-components=1 && \
 rm clang+llvm-3.8.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz && \
-chown -R $USERNAME $USERHOME/ycm_build && \
 echo -e "${Green}YouCompleteMe C-family support downloaded successfully${NC}"
 
 cd $USERHOME/ycm_build && \
@@ -81,7 +75,6 @@ cd $USERHOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/gocode && \
 go build && \
 echo -e "${Green}YouCompleteMe go supported successfully${NC}"
 
-
 # JS support
 curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/node.sh | /bin/bash && \
 cd $USERHOME/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tern_runtime && \
@@ -92,7 +85,11 @@ echo -e "${Green}YouCompleteMe JS supported successfully${NC}"
 vim +PluginInstall +qall
 echo -e "${Green}YouCompleteMe plugin installed successfully${NC}"
 
+# change owner
+chown -R $USERNAME $USERHOME/.vim_runtime
+chown -R $USERNAME $USERHOME/.vim
+chown -R $USERNAME $USERHOME/.vimrc
+
 cd $USERHOME
 rm -rf $USERHOME/ycm_build
 echo -e "${Green}Clean up successfully${NC}"
-
