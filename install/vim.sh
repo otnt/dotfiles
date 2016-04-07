@@ -3,10 +3,10 @@
 # [Warning]: If you already have .vimrc in you home folder, please have a backup before running this script.
 #            Although this script will auto backup .vimrc (if exists) to .vimrc_backup in home folder.
 
-####################Modify below if necessary#######################
-USERHOME=$HOME
-USERNAME=`whoami`
-####################Modify above if necessary#######################
+#################### Modify below please #######################
+USERHOME=/home/vagrant
+USERNAME=vagrant
+#################### Modify above please #######################
 
 Green='\033[0;32m'
 Purple='\033[0;35m'
