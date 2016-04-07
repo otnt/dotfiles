@@ -1,10 +1,12 @@
-# dotfiles
+# Dotfiles
 
-A dotfile collection for useful tools.
+A dotfile collection for useful tools with awesome configuration, including vim, tmux, git etc.
 
-# Instal
+Also have install script for programming language (python, node, js, java etc), useful tools (mongodb etc).
 
-**Recommended:**
+# Install
+
+### **Recommended:**
 
 The recommended way is using docker.
 
@@ -12,7 +14,7 @@ First install docker using [this script](https://github.com/otnt/dotfiles/blob/m
 
 Then install any tool you want. See usage helper under different [docker folder](https://github.com/otnt/dotfiles/tree/master/docker).
 
-**Instal directly**
+### **Instal directly**
 
 Alteratively, you could install the tools directly using bash script.
 
@@ -20,7 +22,7 @@ The scripts could be found [here](https://github.com/otnt/dotfiles/tree/master/i
 
 **Notice**, usually you need to run the script in `sudo` mode. 
 
-**Also Notice**, you may need to replace variables like $USERNAME, $USERHOME in the scripts. That's why docker way is recommended.
+**Also Notice**, you may need to replace variables like `$USERNAME`, `$USERHOME` in the scripts. That's why docker way is recommended.
 
 # Test
 
