@@ -7,10 +7,9 @@
 # Maintainer: Pufan Jiang <jiangpufan@gmail.com>
 
 usage() {
-  echo_red "Usage: /bin/bash add_user.sh <user_name> <password>"
+  echo "Usage: /bin/bash add_user.sh <user_name> <password>"
 }
 
-wget https://raw.githubusercontent.com/otnt/dotfiles/master/tools/color_output.sh | source && \
 if [ "$#" != 2 ]; then
     usage
     exit 1
