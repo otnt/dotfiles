@@ -9,9 +9,9 @@ A dotfile collection for Ubuntu with
 
 A list of use tools with great configuration. Also feel free to explore the repo to find what you need.
 
-* [Development Environment](###Development Environment)
-* [Vim](###Vim)
-* [Tmux 2.0](###Tmux 2.0)
+- [Development Environment](###Development Environment)
+- [Vim](###Vim)
+- [Tmux 2.0](###Tmux 2.0)
 * [Docker](###Docker)
 * [Language Packages](###Language Packages)
   * [Java SE8](####Java)
@@ -39,6 +39,13 @@ wget https://raw.githubusercontent.com/otnt/dotfiles/master/vagrant/Vagrantfile 
 ```Bash
 vagrant up
 vagrant ssh
+```
+
+###Vim
+
+``` Bash
+USERNAME=[ENTER YOUR USERNAME HERE]
+curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/vim.sh | sed -e "s/ubuntu/$USERNAME/g" | sudo /bin/bash
 ```
 
 ### Vim
