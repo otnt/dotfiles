@@ -5,8 +5,8 @@
 # [Usage]: Fork this script, modify USERHOME and USERNAME to your need, then `/bin/bash vim.sh`. Enjoy!
 
 #################### Modify below please #######################
-USERHOME=/home/vagrant
-USERNAME=vagrant
+USERHOME=/home/ubuntu
+USERNAME=ubuntu
 #################### Modify above please #######################
 
 Green='\033[0;32m'
