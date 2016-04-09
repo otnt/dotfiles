@@ -1,6 +1,8 @@
 #!/bin/bash
+# Install Tmux 2.0 with great plugins
+# Maintainer Pufan Jiang<jiangpufan@gmail.com>
 
-USER_HOME=$HOME
+USER_HOME=/home/ubuntu
 TMUX_DIR="$USER_HOME/.tmux"
 
 Green='\033[0;32m'
