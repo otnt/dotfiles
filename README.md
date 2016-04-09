@@ -1,28 +1,22 @@
 # Dotfiles
 
-A dotfile collection for useful tools with awesome configuration, including vim, tmux, git etc.
+A dotfile collection for Ubuntu with
 
-Also have install script for programming language (python, node, js, java etc), useful tools (mongodb etc).
+1. useful tools with awesome configuration, including vim, tmux, git etc.
+2. useful script snippet, including add user, programming language install etc.
 
 # Install
 
-### **Recommended way:**
+A list of use tools with great configuration. Also feel free to explore the repo to find what you need.
 
-The recommended way is using docker.
+* [Vim](#Vim)
+* [Tmux](#Tmux)
 
-First install docker using [this script](https://github.com/otnt/dotfiles/blob/master/install/docker.sh).
+### Vim
 
-Then install any tool you want. See usage helper under different [docker folder](https://github.com/otnt/dotfiles/tree/master/docker).
+### Tmux
 
-### **Install directly:**
 
-Alteratively, you could install the tools directly using bash script.
-
-The scripts could be found [here](https://github.com/otnt/dotfiles/tree/master/install).
-
-**Notice**, usually you need to run the script in `sudo` mode. 
-
-**Also Notice**, you may need to replace variables like `$USERNAME`, `$USERHOME` in the scripts. That's why docker way is recommended.
 
 # Test
 
