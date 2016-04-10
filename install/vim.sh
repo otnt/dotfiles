@@ -33,7 +33,7 @@ echo -e "${Green}Vim installed successfully${NC}"
 # We're using the ultimate vim configuration as our base configuration
 # https://github.com/amix/vimrc
 git clone https://github.com/amix/vimrc.git $USERHOME/.vim_runtime -q && \
-sed -i'' "s/~/$USERHOME/g" $USERHOME/.vim_runtime/install_awesome_vimrc.sh && \
+sed -i'' "s@~@$USERHOME@g" $USERHOME/.vim_runtime/install_awesome_vimrc.sh && \ # thanks to http://stackoverflow.com/a/9366940/4830788
 sh $USERHOME/.vim_runtime/install_awesome_vimrc.sh && \
 echo -e "${Green}Ultimate Vim installed successfully${NC}"
 
