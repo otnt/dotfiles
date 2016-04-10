@@ -1,0 +1,8 @@
+{
+    "plugins": {
+        "node": {},
+        "requirejs": {},
+        "eslint": {},
+        "requirejs-extension": {}
+    }
+}
