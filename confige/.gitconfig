@@ -158,5 +158,5 @@
     helper = cache --timeout=360000
 
 [user]
-    name = "OTNT"
+    name = "pufan jiang" # a name shows on github committing message
     email = "jiangpufan@gmail.com"
