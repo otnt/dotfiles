@@ -45,7 +45,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git $USERHOME/.vim/bundle/Vund
 echo -e "${Green}Vundle installed successfully${NC}"
 
 # We are going to configure YouCompleteMe, which is missing in ultimate vim
-# YouCompleteMe is great for syntax HIGHTLIGHTING
+# YouCompleteMe is great for COMPLETETION
 # configuration. Note YouCompleteMe is a little bit tricky, it needs some
 # extra dependency, and also needs recompile each time you want to update it.
 git clone https://github.com/Valloric/YouCompleteMe.git $USERHOME/.vim/bundle/YouCompleteMe -q && \
@@ -91,6 +91,10 @@ git clone https://github.com/scrooloose/syntastic.git $USERHOME/.vim/bundle/synt
 # Python syntastic support
 curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/python.sh | /bin/bash && \
 pip install flake8
+
+# JavaScript syntastic support
+npm install -g eslint-config-airbnb eslint-plugin-react eslint && \
+npm install -g eslint_d
 
 # update plugins
 vim +PluginInstall +qall
