@@ -73,7 +73,7 @@ tmux
 
 ### Docker
 
-1. Install Docker
+1. Install Docker Engine and Docker Macine
 
 ```Bash
 curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/docker.sh | sudo /bin/bash
@@ -82,7 +82,10 @@ curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/docker.s
 2. Add non-root user to docker user group
 
 ```Bash
+sudo usermod -aG docker [ENTER YOUR USERNAME HERE]
 ```
+
+3. Logout and login bash/shell to enable docker
 
 ### Language Packages
 
