@@ -96,6 +96,9 @@ pip install flake8
 npm install -g eslint-config-airbnb eslint-plugin-react eslint && \
 npm install -g eslint_d
 
+# Java syntastic support
+#curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/java.sh | /bin/bash && \
+
 # update plugins
 vim +PluginInstall +qall
 echo -e "${Green}YouCompleteMe plugin installed successfully${NC}"
