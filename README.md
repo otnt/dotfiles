@@ -15,12 +15,12 @@ A list of use tools with great configuration. Also feel free to explore the repo
 
 - [Development Environment](#development-environment)
 - [Vim](#vim)
-- [Tmux 2.0](#tmux-2.0)
+- [Tmux 2.0](#tmux-20)
 * [Docker](#docker)
 * [Language Packages](#language-packages)
   * [Java SE8](#java)
   * [Python 2 and Python 3](#python)
-  * [Node.js](#node.js)
+  * [Node.js](#nodejs)
   * [Golang](#golang)
 
 ### Development Environment
@@ -88,13 +88,13 @@ sudo usermod -aG docker [ENTER YOUR USERNAME HERE]
 
 ### Language Packages
 
-#### Java
+#### Java SE8
 
 ```Bash
 curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/java.sh | sudo /bin/bash
 ```
 
-#### Python
+#### Python 2 and Python 3
 
 Install both Python 2 and Python 3
 
