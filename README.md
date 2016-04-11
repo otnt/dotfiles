@@ -13,8 +13,8 @@ These dotfiles are tested under and **only** under Ubuntu 14.04 LTS.
 
 A list of use tools with great configuration. Also feel free to explore the repo to find what you need (but don't run them blindly please).
 
-- [Development Environment](###Development Environment)
-- [Vim](###Vim)
+- [Development Environment](#Development Environment)
+- [Vim](#Vim)
 - [Tmux 2.0](###Tmux 2.0)
 * [Docker](###Docker)
 * [Language Packages](###Language Packages)
@@ -23,7 +23,7 @@ A list of use tools with great configuration. Also feel free to explore the repo
   * [Node.js](####Node.js)
   * [Golang](####Golang)
 
-###Development Environment
+### Development Environment
 
 This is my personal development environment. It use [Vagrant](https://www.vagrantup.com/) for virtual machine setup, so that you could set your development environment anywhere, anytime, with no human effort, with no error!!!
 
