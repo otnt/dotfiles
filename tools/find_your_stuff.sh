@@ -18,3 +18,21 @@ fft() {
     tree -P "$1"
   fi
 }
+
+# find pattern string in file
+fs() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: $ fs \"pattern\" \"*.go\""
+  else
+    grep -E $1 $2
+  fi
+}
+
+# find pattern string in file recursively
+fsr() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: $ fsr \"pattern\" \"*.go\""
+  else
+    ff "$2" | xargs grep --color=always -E $1
+  fi
+}
