@@ -5,9 +5,13 @@ A dotfile collection for Ubuntu with
 1. useful tools with awesome configuration, including vim, tmux, git etc.
 2. useful script snippet, including add user, programming language install etc.
 
+**IMPORTANT**
+
+These dotfiles are tested under and **only** under Ubuntu 14.04 LTS.
+
 # Install
 
-A list of use tools with great configuration. Also feel free to explore the repo to find what you need.
+A list of use tools with great configuration. Also feel free to explore the repo to find what you need (but don't run them blindly please).
 
 - [Development Environment](###Development Environment)
 - [Vim](###Vim)
@@ -23,14 +27,16 @@ A list of use tools with great configuration. Also feel free to explore the repo
 
 This is my personal development environment. It use [Vagrant](https://www.vagrantup.com/) for virtual machine setup, so that you could set your development environment anywhere, anytime, with no human effort, with no error!!!
 
+Please notice I use heavily vim and tmux, which may not be your best choice.
+
 1. Install Vagrant
 
-Install Vagrant is easy. Follow the [official guide](https://www.vagrantup.com/).
+Install Vagrant is easy. Please refer to [official guide](https://www.vagrantup.com/).
 
 2. Download cofiguration files
 
 ```Bash
-mkdir workspace
+mkdir workspace && cd workspace
 wget https://raw.githubusercontent.com/otnt/dotfiles/master/vagrant/Vagrantfile https://raw.githubusercontent.com/otnt/dotfiles/master/vagrant/bootstrap.sh
 ```
 
