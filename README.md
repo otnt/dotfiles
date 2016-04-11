@@ -13,10 +13,11 @@ These dotfiles are tested under and **only** under Ubuntu 14.04 LTS.
 
 A list of use tools with great configuration. Also feel free to explore the repo to find what you need (but don't run them blindly please).
 
-- [Development Environment](#development-environment)
-- [Vim](#vim)
-- [Tmux 2.0](#tmux-20)
+* [Development Environment](#development-environment)
+* [Vim](#vim)
+* [Tmux 2.0](#tmux-20)
 * [Docker](#docker)
+* [Git](#git)
 * [Language Packages](#language-packages)
   * [Java SE8](#java)
   * [Python 2 and Python 3](#python)
@@ -85,6 +86,15 @@ sudo usermod -aG docker [ENTER YOUR USERNAME HERE]
 ```
 
 3. Logout and login bash/shell to enable docker
+
+### Git
+
+1. Install git with configuration optimized for GitHub
+
+```Bash
+USERNAME=[ENTER YOUR USERNAME HERE]
+curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/git.sh | sed -e "s/ubuntu/$USERNAME/g" | sudo /bin/bash
+```
 
 ### Language Packages
 
