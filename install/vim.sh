@@ -99,6 +99,13 @@ npm install -g eslint_d
 # Java syntastic support
 #curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/java.sh | /bin/bash && \
 
+# AutoFormat
+# This is great for FORMATTING
+git clone https://github.com/Chiel92/vim-autoformat.git $USERHOME/.vim/bundle/vim-autoformat -q
+
+# JavaScript format
+npm install jscs -g
+
 # update plugins
 vim +PluginInstall +qall
 echo -e "${Green}YouCompleteMe plugin installed successfully${NC}"
