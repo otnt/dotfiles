@@ -13,15 +13,15 @@ These dotfiles are tested under and **only** under Ubuntu 14.04 LTS.
 
 A list of use tools with great configuration. Also feel free to explore the repo to find what you need (but don't run them blindly please).
 
-- [Development Environment](#Development Environment)
+- [Development Environment](#Development-Environment)
 - [Vim](#Vim)
-- [Tmux 2.0](###Tmux 2.0)
-* [Docker](###Docker)
-* [Language Packages](###Language Packages)
-  * [Java SE8](####Java)
-  * [Python 2 and Python 3](####Python)
-  * [Node.js](####Node.js)
-  * [Golang](####Golang)
+- [Tmux 2.0](#Tmux-2.0)
+* [Docker](#Docker)
+* [Language Packages](#Language Packages)
+  * [Java SE8](#Java)
+  * [Python 2 and Python 3](#Python)
+  * [Node.js](#Node.js)
+  * [Golang](#Golang)
 
 ### Development Environment
 
@@ -45,13 +45,6 @@ wget https://raw.githubusercontent.com/otnt/dotfiles/master/vagrant/Vagrantfile 
 ```Bash
 vagrant up
 vagrant ssh
-```
-
-###Vim
-
-``` Bash
-USERNAME=[ENTER YOUR USERNAME HERE]
-curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/vim.sh | sed -e "s/ubuntu/$USERNAME/g" | sudo /bin/bash
 ```
 
 ### Vim
