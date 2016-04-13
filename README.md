@@ -19,8 +19,8 @@ A list of use tools with great configuration. Also feel free to explore the repo
 * [Docker](#docker)
 * [Git](#git)
 * [Language Packages](#language-packages)
-  * [Java SE8](#javase8)
-  * [Python 2 and Python 3](#python2andpython3)
+  * [Java SE8](#java-se8)
+  * [Python 2 and Python 3](#python-2-and-python-3)
   * [Node.js](#nodejs)
   * [Golang](#golang)
 
