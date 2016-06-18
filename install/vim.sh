@@ -55,6 +55,8 @@ cd $USERHOME && \
 mkdir ycm_build && \
 echo -e "${Green}YouCompleteMe downloaded successfully${NC}"
 
+# The following two steps are for Ubuntu users. For Mac users, make sure you
+# have XCode installed, and you should refer to here https://github.com/Valloric/YouCompleteMe
 # skip this step if you don't need c-family language support
 cd $USERHOME/ycm_build && \
 mkdir clang++ && \
