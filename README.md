@@ -129,9 +129,3 @@ curl -sL https://raw.githubusercontent.com/otnt/dotfiles/master/install/golang.s
 # Test
 
 Tested under Ubuntu 14.04
-
-# Feedback
-
-I'm welcome to any feedback. And I will reply within 24 hours.
-
-Have fun!
